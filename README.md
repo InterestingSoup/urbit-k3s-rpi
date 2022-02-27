@@ -1,6 +1,6 @@
 # urbit-k3s-rpi
 ## Urbit on K3S
-![Urbit on k3s](https://interestingsoup.com/content/images/2022/02/urbitonk3s2.png)
+![Urbit on k3s](urbitonk3s.png)
 
 [interestingsoup/urbit-aarch64](https://hub.docker.com/r/interestingsoup/urbit-aarch64) is the image used in this tutorial.
 Learn more about why and how we made it [here](https://interestingsoup.com/how-to-create-a-dockerimage/)
