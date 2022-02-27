@@ -1,11 +1,14 @@
 # urbit-k3s-rpi
 ## Urbit Deployment on K3S 
 
-This guide assumes:
-- Seetup a persistent volume and presistent volume claim for your Urbit pod. I am providing my pv.yaml and pvc.yaml as an example.
+This guide assumes you have:
+- Setup a persistent volume and presistent volume claim for your Urbit pod. I am providing my pv.yaml and pvc.yaml as an example.
 - Have a LoadBalancer installed, I am using MetalLb. 
 
-The image in this tutorial executes `urbit` upon running. When setting arguments in `*-planet.yaml` you may follow the Urbit man page example:
+[interestingsoup/urbit-aarch64](https://hub.docker.com/r/interestingsoup/urbit-aarch64) is the image used in this tutorial. 
+Learn more about why and how we made it [here](). 
+
+The image executes `urbit` upon running. When setting args in `*-planet.yaml` you may follow the Urbit man page example:
 
 ```
 Simple Usage:
@@ -28,7 +31,8 @@ You can check log output of the pod to see if any error occurs once the Urbit co
 You can see your pod error by running: `kubectl get pods -A`
 
 Once the pod errors out, you can go ahead and delete your deployment:
-`kubectl delete -f new-planet.yaml -n urbit`
+
+	$kubectl delete -f new-planet.yaml -n urbit
 
 ### Secondary Launch (to retrieve your planet's code)
 
