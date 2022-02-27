@@ -1,14 +1,14 @@
 # urbit-k3s-rpi
 ## Urbit Deployment on K3S 
 
+[interestingsoup/urbit-aarch64](https://hub.docker.com/r/interestingsoup/urbit-aarch64) is the image used in this tutorial.
+Learn more about why and how we made it [here](https://interestingsoup.com/how-to-create-a-dockerimage/)
+
 This guide assumes you have:
 - Setup a persistent volume and presistent volume claim for your Urbit pod. I am providing my pv.yaml and pvc.yaml as an example.
-- Have a LoadBalancer installed, I am using MetalLb. 
+- Installed a LoadBalancer service on your cluster, I am using MetalLb. 
 
-[interestingsoup/urbit-aarch64](https://hub.docker.com/r/interestingsoup/urbit-aarch64) is the image used in this tutorial. 
-Learn more about why and how we made it [here](). 
-
-The image executes `urbit` upon running. When setting args in `*-planet.yaml` you may follow the Urbit man page example:
+The docker image being used executes `urbit` upon running, so you only need to supply thr args.  When setting args in `*-planet.yaml` you may referrence the Urbit man page example:
 
 ```
 Simple Usage:
