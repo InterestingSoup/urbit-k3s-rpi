@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: urbit
+  namespace: urbit
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: urbit
+  template:
+    metadata:
+      name: urbit
+      labels:
+        app: urbit
+    spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+      - name: urbit-pv-storage
+        persistentVolumeClaim:
+          claimName: urbit-pv-claim
+      restartPolicy: Always
+      containers:
+      - name: urbit
+        image: interestingsoup/urbit-aarch64
+        stdin: true
+        tty: true
+        ports:
+        - name: http
+          containerPort: 80
+        - name: ames
+          containerPort: 23232
+        command: []
+        args: ["-w", "foplep-macneb", "-k", "foplep-macneb-3.key"]
+        resources:
+          limits:
+            memory: "4Gi"
+            cpu: "1000m"
+          requests: 
+            memory: "2Gi"
+            cpu: "500m"
+        volumeMounts:
+          - mountPath: "/urbit"
+            name: urbit-pv-storage
