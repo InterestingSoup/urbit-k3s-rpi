@@ -91,10 +91,10 @@ urbit           urbit                  LoadBalancer   10.43.5.99      192.168.4.
 As you can see from my output above, I now have an ExternalIP assigned and if I go to that IP on any device on my network, I can access Urbit Landscape successfully.
 
 ## Questions
-Urbit group: [🧠🥣InterestingSoup](web+urbitgraph://group/~togtun-pocres/brain-interestingsoup-bowl-with-spoon)
-Urbit DM: ~togtun-pocres
-Website: [InterestingSoup.com](https://interestingsoup.com)
-TikTok?! Why Not!: [@interestingsoup](https://www.tiktok.com/@interestingsoup)
+Urbit group: [🧠🥣InterestingSoup](web+urbitgraph://group/~togtun-pocres/brain-interestingsoup-bowl-with-spoon) <br>
+Urbit DM: ~togtun-pocres <br>
+Website: [InterestingSoup.com](https://interestingsoup.com) <br>
+TikTok?! Why Not!: [@interestingsoup](https://www.tiktok.com/@interestingsoup) <br>
 
 ## Special Thanks To:
 ~nartec-tinrus: for working alongside me to create this and also supplying a planet to make testing easier!
