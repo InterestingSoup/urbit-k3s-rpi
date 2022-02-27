@@ -17,7 +17,7 @@ Simple Usage:
    urbit <my-planet or my-comet> to restart an existing urbit
 ```
 
-## Deplay your Planet
+## Deploy your Planet
 
 ### Initial Launch (First boot)
 Modify `new-planet.yaml` with your information before running this command:
@@ -95,4 +95,5 @@ Urbit DM: ~togtun-pocres
 Website: [InterestingSoup.com](https://interestingsoup.com)
 TikTok?! Why Not!: [@interestingsoup](https://www.tiktok.com/@interestingsoup)
 
-
+## Special Thanks To:
+~nartec-tinrus: for working alongside me to create this and also supplying a planet to make testing easier!
