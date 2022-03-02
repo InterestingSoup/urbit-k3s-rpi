@@ -21,9 +21,9 @@ Simple Usage:
 ## Deploy your Planet
 
 ### Initial Launch (First boot)
-Modify `new-planet.yaml` with your information before running this command:
+Modify `new-planet.yaml` with your information before running the command below.
 
-$kubectl apply -f new-planet.yaml -n urbit
+	$kubectl apply -f new-planet.yaml -n urbit
 
 You can check log output of the pod to see if any error occurs once the Urbit container is created:
 
