@@ -53,7 +53,7 @@ In the pod logs look out for **live** and **ames** port that Urbit is using, you
         -d '{ "source": { "dojo": "+code" }, "sink": { "stdout": null } }' \
         http://127.0.0.1:12321
 	
-It should out put something like this: `"dander-sornus-somlug-tacwel\n"`. That is your access code, be sure to exclude the `\n` at the end.
+It should out put something like this: `"rander-suolus-guspod-wacel\n"`. That is your access code, be sure to exclude the `\n` at the end.
 	
 
 ## Accessing Landscape
