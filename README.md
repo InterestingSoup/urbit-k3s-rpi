@@ -37,33 +37,6 @@ Once the pod errors out, you can go ahead and delete your deployment:
 
 	$kubectl delete -f new-planet.yaml -n urbit
 
-### Secondary Launch (to retrieve your planet's code)
-
-Apply `no-planet.yaml` to launch your container without executing `urbit` command. 
-This will just keep your pod in Running state, so that we can get shell access.
-
-	$kubectl apply -f no-planet.yaml -n urbit
-
-After the pod is in running status, you may run this command to open a empty shell:
-
-	$kubectl exec -it  <pod_name> -n urbit -- /bin/sh
-
-In the created SHELL, run urbit with your planet-name:
-`urbit <planet-name>`
-
-Once your planet is fully up, runnning, and you see `dojo`. 
-You can run: 
-
-	$+code
-
-to get your planets access code. 
-Please keep this in a safe spot as it's reusable.
-CTRL-C or CTRL-D out of dojo and then the SHELL.
-
-Now delete the deployment:
-
-	$kubectl delete -f no-planet.yaml -n urbit
-
 ### Final Launch (restart your existing planet)
 Lastly, apply `restart-planet.yaml` to restart an existing planet.
 
@@ -72,6 +45,16 @@ Lastly, apply `restart-planet.yaml` to restart an existing planet.
 You should now see your Urbit pod up and running: `kubectl get pods -A`.
 You can see Urbit service has successfully started by view pod logs: `kubectl logs <pod_name> -n urbit`
 In the pod logs look out for **live** and **ames** port that Urbit is using, you will use these ports in `service.yaml`
+
+
+### Generating Access Key (+code)
+
+	$kubectl exec -it <pod_name> -n <namespace> -- curl -s -X POST -H "Content-Type: application/json" \
+        -d '{ "source": { "dojo": "+code" }, "sink": { "stdout": null } }' \
+        http://127.0.0.1:12321
+	
+It should out put something like this: `"dander-sornus-somlug-tacwel\n"`. That is your access code, be sure to exclude the `\n` at the end.
+	
 
 ## Accessing Landscape
 
